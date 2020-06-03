@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="gnome"
+            type="com.warriorsdev.brastlewark.model.Gnome" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/gnomeProfilePicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/gnomeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeProfilePicture"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@{gnome.name}"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Cogwitz Bitterrocket" />
+
+            <TextView
+                android:id="@+id/gnomeAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeName"
+                android:layout_marginTop="8dp"
+                android:alpha="0.75"
+                android:drawableStart="@drawable/ic_person_white_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="@{String.format(@plurals/gnome_age(gnome.age, gnome.age))}"
+                tools:text="Age: 30 years old" />
+
+            <TextView
+                android:id="@+id/gnomeHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeAge"
+                android:layout_marginTop="8dp"
+                android:alpha="0.75"
+                android:drawableStart="@drawable/ic_nature_people_white_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="@{String.format(@string/gnome_height, gnome.height)}"
+                tools:text="Height: 98 cm" />
+
+            <TextView
+                android:id="@+id/gnomeWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeHeight"
+                android:layout_marginTop="8dp"
+                android:alpha="0.75"
+                android:drawableStart="@drawable/ic_dock_weight_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="@{String.format(@string/gnome_weight, gnome.weight)}"
+                tools:text="Weight: 44 g" />
+
+            <TextView
+                android:id="@+id/gnomeHairColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeWeight"
+                android:drawableStart="@drawable/shape_hair_color_indicator"
+                android:alpha="0.75"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="@{String.format(@string/gnome_hair_color, gnome.hairColor)}"
+                tools:text="Black hair color" />
+
+            <TextView
+                android:id="@+id/gnomeGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeHairColor"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:alpha="0.75"
+                android:gravity="start|center_vertical"
+                android:text="@{String.format(@string/gnome_genre_color, gnome.genre)}"
+                tools:text="Black hair color" />
+
+            <TextView
+                android:id="@+id/gnomeProfessions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeGenre"
+                android:layout_marginTop="8dp"
+                android:alpha="0.75"
+                android:drawableStart="@drawable/ic_school_white_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="@{@plurals/gnome_professions(gnome.professions.size())}"
+                tools:text="Professions (1):" />
+
+            <LinearLayout
+                android:id="@+id/gnomeProfessionsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeProfessions"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/gnomeFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeProfessionsList"
+                android:layout_marginTop="8dp"
+                android:alpha="0.75"
+                android:drawableStart="@drawable/ic_group_white_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="@{@plurals/gnome_friends(gnome.friends.size())}"
+                tools:text="Friends (1):" />
+
+            <LinearLayout
+                android:id="@+id/gnomeFriendsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gnomeFriends"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+
+            <ProgressBar
+                android:id="@+id/pictureLoading"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="?android:attr/windowBackground" />
+
+            <ProgressBar
+                android:id="@+id/gnomeLoading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/windowBackground"
+                android:indeterminate="true" />
+        </RelativeLayout>
+    </ScrollView>
+</layout>

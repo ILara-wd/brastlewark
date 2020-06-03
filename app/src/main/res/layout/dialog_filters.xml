@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/ageLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:text="@string/age"
+                android:textColor="@android:color/white"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+            <EditText
+                android:id="@+id/ageFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ageLabel"
+                android:layout_alignParentStart="true"
+                android:alpha="0.7"
+                android:hint="@string/from"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/ageTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ageLabel"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:hint="@string/to"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/weightLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ageTo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:text="@string/weight"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/weightFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weightLabel"
+                android:layout_alignParentStart="true"
+                android:alpha="0.7"
+                android:hint="@string/from"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/weightTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weightLabel"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:hint="@string/to"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/heightLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weightTo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:text="@string/height"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/heightFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heightLabel"
+                android:layout_alignParentStart="true"
+                android:alpha="0.7"
+                android:hint="@string/from"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/heightTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heightLabel"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:hint="@string/to"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/friendsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heightTo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:text="@string/friends"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <EditText
+                android:id="@+id/friendsFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friendsLabel"
+                android:layout_alignParentStart="true"
+                android:alpha="0.7"
+                android:hint="@string/from"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/friendsTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friendsLabel"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:hint="@string/to"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/hairColorsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friendsTo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:text="@string/hair_color"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <LinearLayout
+                android:id="@+id/hairCheckBoxGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hairColorsLabel"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/professionsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hairCheckBoxGroup"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:text="@string/professions"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <LinearLayout
+                android:id="@+id/professionsCheckBoxGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/professionsLabel"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true" />
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/professionsCheckBoxGroup"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="?android:attr/colorAccent"
+                android:text="@string/apply_filters"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="gnome"
+            type="com.warriorsdev.brastlewark.model.Gnome" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/gnomeProfilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:adjustViewBounds="true"
+            android:minWidth="70dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/gnomeProfilePicture"
+            android:alpha="0.75"
+            android:gravity="start|center_vertical"
+            android:text="@{@plurals/gnome_name(gnome.age, gnome.name, gnome.age)}"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="I'm a Gnome!" />
+
+        <TextView
+            android:id="@+id/professions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/gnomeProfilePicture"
+            android:alpha="0.5"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            tools:text="Professions: Swordmaker, Doctor, Necromancer" />
+
+        <ProgressBar
+            android:id="@+id/gnomeLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground" />
+
+        <ProgressBar
+            android:id="@+id/pictureProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@id/name"
+            android:background="?android:attr/windowBackground" />
+    </RelativeLayout>
+</layout>
